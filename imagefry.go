@@ -78,6 +78,7 @@ func inputParseAndOpen() (*os.File, int) {
 			intnumfry, err := strconv.Atoi(numfry)
 			if err != nil {
 				fmt.Fprintf(os.Stderr, "ERROR: please enter a number of times to fry, %s\n", err)
+				os.Exit(1)
 			}
 			return imageFile, intnumfry
 		} else if len(os.Args) > 3 {
